@@ -4052,7 +4052,7 @@ GameObject:
   - component: {fileID: 3105170482197042638}
   - component: {fileID: 7203020670527791480}
   m_Layer: 0
-  m_Name: saloonDoors
+  m_Name: Salon Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

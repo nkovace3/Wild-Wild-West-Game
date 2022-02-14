@@ -2605,7 +2605,7 @@ GameObject:
   - component: {fileID: 4180023772373023375}
   - component: {fileID: 4180023772373023374}
   m_Layer: 0
-  m_Name: Barallel
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
