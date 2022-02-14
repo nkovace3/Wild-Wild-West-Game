@@ -307,7 +307,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9585917c97a3a4fd38eb797639f454c1, type: 2}
+  - {fileID: 2100000, guid: 5f4a52146176b304297ed65b7ccd4780, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -344,7 +344,7 @@ MonoBehaviour:
   designID: 4222
   legacy: 1
   connectivity: {fileID: 0}
-  materialIDs: 04000000
+  materialIDs: 26000000
   colliders: {fileID: 0}
   brick: {fileID: 6474676280023150943}
   knobs: []
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 6713298607307988554}
   - component: {fileID: 7960141090140608291}
   m_Layer: 0
-  m_Name: chairLEGO
+  m_Name: Chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -520,7 +520,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9585917c97a3a4fd38eb797639f454c1, type: 2}
+  - {fileID: 2100000, guid: 5f4a52146176b304297ed65b7ccd4780, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -557,7 +557,7 @@ MonoBehaviour:
   designID: 71075
   legacy: 1
   connectivity: {fileID: 0}
-  materialIDs: 04000000
+  materialIDs: 26000000
   colliders: {fileID: 0}
   brick: {fileID: 3577477759820237089}
   knobs: []

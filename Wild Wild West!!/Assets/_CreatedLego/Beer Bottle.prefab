@@ -836,7 +836,7 @@ MonoBehaviour:
   designID: 95228
   legacy: 0
   connectivity: {fileID: 5101256448329344970}
-  materialIDs: 6f000000
+  materialIDs: 25000000
   colliders: {fileID: 5247751485319312181}
   brick: {fileID: 5383364412912160593}
   knobs:
@@ -1247,7 +1247,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bba8a184efe2220428ca021702742a6a, type: 2}
+  - {fileID: 2100000, guid: c5ec2dc9a4751194092cea3c4e3170b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1743,7 +1743,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bba8a184efe2220428ca021702742a6a, type: 2}
+  - {fileID: 2100000, guid: c5ec2dc9a4751194092cea3c4e3170b9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1795,7 +1795,7 @@ GameObject:
   - component: {fileID: 7065055674735323333}
   - component: {fileID: 9030825869900876808}
   m_Layer: 0
-  m_Name: brewBottle
+  m_Name: Beer Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
