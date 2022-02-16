@@ -2,6 +2,8 @@ Wild West Bounty Hunter Game
 - created for software construction course
 - hopefully there are no bugs
 
+
+WORKING NOTES
 HOW TO PUSH BIG FILES (just for later note)
 ________________________________________________
 cd
