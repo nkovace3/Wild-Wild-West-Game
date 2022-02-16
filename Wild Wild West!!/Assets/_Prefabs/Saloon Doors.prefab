@@ -18114,7 +18114,7 @@ GameObject:
   - component: {fileID: 7865030126089741174}
   - component: {fileID: 6147473025301336615}
   m_Layer: 0
-  m_Name: Saloon Doors w Arch
+  m_Name: Saloon Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

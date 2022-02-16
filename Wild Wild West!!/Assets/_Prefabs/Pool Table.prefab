@@ -29326,7 +29326,7 @@ GameObject:
   - component: {fileID: 2756126645522211797}
   - component: {fileID: 889278883553330373}
   m_Layer: 0
-  m_Name: PoolTable
+  m_Name: Pool Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
