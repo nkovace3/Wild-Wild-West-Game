@@ -380,18 +380,9 @@ namespace Unity.LEGO.Minifig
                         {
                             jumpsInAir--;
 
-                            if (doubleJumpAudioClip)
-                            {
-                                audioSource.PlayOneShot(doubleJumpAudioClip);
-                            }
+                    
                         }
-                        else
-                        {
-                            if (jumpAudioClip)
-                            {
-                                audioSource.PlayOneShot(jumpAudioClip);
-                            }
-                        }
+                       
 
                         moveDelta.y = jumpSpeed;
                         animator.SetTrigger(jumpHash);
@@ -671,14 +662,7 @@ namespace Unity.LEGO.Minifig
             // If becoming grounded by this Move, reset y movement and airborne time.
             if (!wasGrounded && controller.isGrounded)
             {
-                // Play landing sound if landing sufficiently hard.
-                if (moveDelta.y < -5.0f)
-                {
-                    if (landAudioClip)
-                    {
-                        audioSource.PlayOneShot(landAudioClip);
-                    }
-                }
+            
 
                 moveDelta.y = 0.0f;
                 airborneTime = 0.0f;
@@ -719,12 +703,6 @@ namespace Unity.LEGO.Minifig
         {
             animator.SetBool(playSpecialHash, true);
             animator.SetInteger(specialIdHash, (int)animation);
-
-            if (specialAudioClip)
-            {
-                audioSource.PlayOneShot(specialAudioClip);
-            }
-
             this.onSpecialComplete = onSpecialComplete;
         }
 
