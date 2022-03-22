@@ -26,7 +26,7 @@ public class EnemyController : MonoBehaviour
             {
                 targetDistance = shot.distance;
             }
-            if (targetDistance >= 5)
+            if (targetDistance >= 1.5)
             {
                 followSpeed = 0.2f;
                 //enemy.GetComponent<Animation>().Play("Locomotion");
