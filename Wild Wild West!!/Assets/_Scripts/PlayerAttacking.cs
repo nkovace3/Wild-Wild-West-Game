@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class PlayerAttacking : MonoBehaviour
 {
+    public GameObject player;
     public GameObject enemy;
     public float targetDistance;
     public RaycastHit shot;
-
+    public int health = 3;
+    
     // Update is called once per frame
     void Update()
     {
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot))
+        
+        float distance = Mathf.Abs(enemy.transform.position.magnitude - player.transform.position.magnitude);
+        
+        if((distance <=2f) && Input.GetMouseButtonDown(0))
         {
-            targetDistance = shot.distance;
+           
+            health--;
         }
-        if (targetDistance < 1 && Input.GetMouseButtonDown(0))
+        if ((distance <= 2f) && Input.GetMouseButtonDown(1))
         {
-            Destroy(enemy);
-            //enemy.GetComponent<Animation>().Play("Locomotion");
+
+            health-=2;
+        }
+        if (health == 0)
+        {
+            enemy.SetActive(false);
         }
     }
 }

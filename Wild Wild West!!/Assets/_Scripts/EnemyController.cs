@@ -13,17 +13,14 @@ public class EnemyController : MonoBehaviour
 
     private void Awake()
     {
-        Invoke("Delay", 15);
+       
     }
-    private void Delay()
-    {
-        attack = 1;
-    }
+    
     // Update is called once per frame
     void Update()
     {
-        if (attack == 1)
-        {
+        
+        
             transform.LookAt(player.transform);        //move towards the player
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot))
             {
@@ -41,7 +38,7 @@ public class EnemyController : MonoBehaviour
                 //if the player is within 1 of each of the x and z positions, he attacks every few seconds
 
             }
-        }
+        
 
 
     }
