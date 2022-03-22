@@ -5997,6 +5997,7 @@ GameObject:
   - component: {fileID: -174638945078839035}
   - component: {fileID: -6572778838289105584}
   - component: {fileID: 8104921226966439771}
+  - component: {fileID: 5781891940823585049}
   m_Layer: 9
   m_Name: Adventurer
   m_TagString: Player
@@ -6284,8 +6285,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd77eb5e60c74aafb51a1c39b4e8f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  enemy: {fileID: 0}
   targetDistance: 0
   followSpeed: 0
+--- !u!65 &5781891940823585049
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9078427627668221896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 3.84, z: 0.8}
+  m_Center: {x: 0, y: 1.92, z: 0}
 --- !u!1 &9109213664759375802
 GameObject:
   m_ObjectHideFlags: 0
