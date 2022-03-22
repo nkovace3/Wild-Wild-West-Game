@@ -13,6 +13,14 @@ public class CameraFollow : MonoBehaviour
     public Image image1;
     public Image image2;
 
+    //for the xp bar
+    public int addBar;
+    public Image[] filler = new Image[4];
+
+
+    
+
+
     private void Start()
     {
         Invoke("deletePoster", 10);
@@ -26,6 +34,11 @@ public class CameraFollow : MonoBehaviour
         transform.LookAt(player);
 
         Rotate();
+        addBar++;
+        if (addBar % 100 ==0)
+        {
+            Destroy(filler[addBar / 100]);
+        }
     }
 
     void Rotate()
