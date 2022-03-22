@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    GameObject player;
-    GameObject enemy;
+    public GameObject player;
+   public  GameObject enemy;
     public float targetDistance;
     public RaycastHit shot;
     public float followSpeed = 0;
@@ -19,10 +19,10 @@ public class EnemyController : MonoBehaviour
         {
             targetDistance = shot.distance;
         }
-        if (targetDistance >= 1)
+        if (targetDistance >= 5)
         {
-            followSpeed = 1;
-            enemy.GetComponent<Animation>().Play("run");
+            followSpeed = 0.2f;
+            //enemy.GetComponent<Animation>().Play("Locomotion");
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, followSpeed);
         }
         else
@@ -37,13 +37,13 @@ public class EnemyController : MonoBehaviour
 
     public void punch()
     {
-        enemy.GetComponent<Animation>().Play("run");
+        //enemy.GetComponent<Animation>().Play("run");
         //punch script
 
     }
     public void kick()
     {
-        enemy.GetComponent<Animation>().Play("kick");
+        //enemy.GetComponent<Animation>().Play("kick");
 
     }
 }

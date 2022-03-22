@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -9,6 +10,12 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offset;
     public Vector2 mouseTurn;
     public float sensitivity = .5f;
+    public Image image;
+
+    private void Start()
+    {
+        Invoke("deletePoster", 5);
+    }
     void Update()
     {
         Vector3 desiredPosition = player.position + offset;
@@ -23,5 +30,10 @@ public class CameraFollow : MonoBehaviour
     void Rotate()
     {
         offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * sensitivity, Vector3.up) * offset;
+    }
+
+    void deletePoster()
+    {
+        Destroy(image);
     }
 }
