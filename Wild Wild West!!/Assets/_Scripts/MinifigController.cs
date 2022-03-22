@@ -211,6 +211,17 @@ namespace Unity.LEGO.Minifig
 
         protected Action<bool> onSpecialComplete;
 
+        public void OnTriggerEnter(Collider other)
+        {
+            GameObject gameObject = other.gameObject;
+            if (gameObject.CompareTag("Player"))
+            {
+                Destroy(gameObject);
+            }
+
+        }
+
+
         protected virtual void OnValidate()
         {
             maxForwardSpeed = Mathf.Clamp(maxForwardSpeed, 5, 30);
@@ -607,6 +618,8 @@ namespace Unity.LEGO.Minifig
             }
         }
 
+
+        
         protected void HandleMotion()
         {
             // Handle external motion.
@@ -789,6 +802,8 @@ namespace Unity.LEGO.Minifig
             currentTurnTarget = null;
             UpdateState();
         }
+
+
 
         public void Follow(Transform target, float minDistance = 0.0f, Action onComplete = null, float onCompleteDelay = 0.0f,
             float followDelay = 0.0f, bool cancelSpecial = true, float speedMultiplier = 1.0f, float rotationSpeedMultiplier = 1.0f, Vector3? turnToWhileCompleting = null)
