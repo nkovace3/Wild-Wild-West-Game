@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/StartScene.unity
     guid: 9ca9288a588bc4a13a53c71d48681585
   - enabled: 1
+    path: Assets/_Scenes/GameDescription.unity
+    guid: 9f6197ccd70a34d89a361dfc2cfa608b
+  - enabled: 1
     path: Assets/_Scenes/Saloon.unity
     guid: 63f339428506b42a2bbd9006507c573b
   - enabled: 0
