@@ -7,7 +7,6 @@ public class PlayerAttacking : MonoBehaviour
     public GameObject player;
     public GameObject enemy;
     public float targetDistance;
-    public RaycastHit shot;
     public int health = 3;
     
     // Update is called once per frame
@@ -16,17 +15,16 @@ public class PlayerAttacking : MonoBehaviour
         
         float distance = Mathf.Abs(enemy.transform.position.magnitude - player.transform.position.magnitude);
         
-        if((distance <=2f) && Input.GetMouseButtonDown(0))
+        if((distance <= 2f) && Input.GetMouseButtonDown(0))
         {
            
             health--;
         }
         if ((distance <= 2f) && Input.GetMouseButtonDown(1))
         {
-
-            health-=2;
+            health=health-2;
         }
-        if (health == 0)
+        if (health <= 0)
         {
             enemy.SetActive(false);
         }

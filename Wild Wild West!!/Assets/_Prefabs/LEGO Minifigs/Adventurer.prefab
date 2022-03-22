@@ -4743,10 +4743,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfd77eb5e60c74aafb51a1c39b4e8f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 9065305274124290218, guid: ee3e4427d5afdbc46bdccb0463917e79, type: 3}
+  player: {fileID: 0}
   enemy: {fileID: 7743998902329123527}
   targetDistance: 3
   followSpeed: 5
+  playerHealth: 10
 --- !u!65 &7743998902329123536
 BoxCollider:
   m_ObjectHideFlags: 0
