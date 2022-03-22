@@ -11,9 +11,11 @@ public class EnemyController : MonoBehaviour
     public float followSpeed = 0;
     float attack = 0;
 
+    Animator animl;
     private void Awake()
     {
-       
+        
+        animl = GetComponent<Animator>();
     }
     
     // Update is called once per frame
@@ -35,11 +37,12 @@ public class EnemyController : MonoBehaviour
             else
             {
                 followSpeed = 0;
-                //if the player is within 1 of each of the x and z positions, he attacks every few seconds
+            animl.SetTrigger("Kick");
+            //if the player is within 1 of each of the x and z positions, he attacks every few seconds
 
-            }
-        
+        }
 
+       
 
     }
 
