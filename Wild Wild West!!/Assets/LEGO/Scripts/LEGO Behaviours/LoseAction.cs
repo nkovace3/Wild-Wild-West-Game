@@ -35,11 +35,7 @@ namespace Unity.LEGO.Behaviours.Actions
                     result.Description = "Hurry up!";
                     result.ProgressType = ObjectiveProgressType.Time;
                 }
-                else if (triggerType == typeof(RandomTrigger))
-                {
-                    result.Title = "Finish Before a Random Time is Up";
-                    result.Description = "Hurry up!";
-                }
+               
                 else if (triggerType == typeof(InputTrigger))
                 {
                     result.Title = "Don't Press the Button";

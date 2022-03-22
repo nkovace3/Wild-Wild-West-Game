@@ -34,11 +34,7 @@ namespace Unity.LEGO.Behaviours.Actions
                     result.Description = "Hang in there!";
                     result.ProgressType = ObjectiveProgressType.Time;
                 }
-                else if (triggerType == typeof(RandomTrigger))
-                {
-                    result.Title = "Survive for a Random Time";
-                    result.Description = "Hang in there!";
-                }
+               
                 else if (triggerType == typeof(InputTrigger))
                 {
                     result.Title = "Press the Button";

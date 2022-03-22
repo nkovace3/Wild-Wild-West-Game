@@ -365,17 +365,7 @@ namespace Unity.LEGO.Minifig
                         {
                             jumpsInAir--;
 
-                            if (doubleJumpAudioClip)
-                            {
-                                audioSource.PlayOneShot(doubleJumpAudioClip);
-                            }
-                        }
-                        else
-                        {
-                            if (jumpAudioClip)
-                            {
-                                audioSource.PlayOneShot(jumpAudioClip);
-                            }
+                       
                         }
 
                         moveDelta.y = jumpSpeed;
@@ -654,14 +644,7 @@ namespace Unity.LEGO.Minifig
             // If becoming grounded by this Move, reset y movement and airborne time.
             if (!wasGrounded && controller.isGrounded)
             {
-                // Play landing sound if landing sufficiently hard.
-                if (moveDelta.y < -5.0f)
-                {
-                    if (landAudioClip)
-                    {
-                        audioSource.PlayOneShot(landAudioClip);
-                    }
-                }
+       
 
                 moveDelta.y = 0.0f;
                 airborneTime = 0.0f;
@@ -847,10 +830,7 @@ namespace Unity.LEGO.Minifig
                 if (stepAudioClips.Count > 0)
                 {
                     var stepAudioClip = stepAudioClips[UnityEngine.Random.Range(0, stepAudioClips.Count)];
-                    if (stepAudioClip)
-                    {
-                        audioSource.PlayOneShot(stepAudioClip);
-                    }
+             
                 }
             }
             stepped = true;
@@ -962,25 +942,8 @@ namespace Unity.LEGO.Minifig
                 targetRotateSpeed = Mathf.Clamp(angleDiff, -1.0f, 1.0f) * rotationSpeedMultiplier * maxRotateSpeed;
             }
 
-            // Adjust rotate speed based on target rotate speed.
-            if (targetRotateSpeed > rotateSpeed)
-            {
-                rotateSpeed = Mathf.Min(targetRotateSpeed, rotateSpeed + rotateAcceleration * Time.deltaTime);
-            }
-            else if (targetRotateSpeed < rotateSpeed)
-            {
-                rotateSpeed = Mathf.Max(targetRotateSpeed, rotateSpeed - rotateAcceleration * Time.deltaTime);
-            }
 
-            // Prevent overshoot by limiting rotateSpeed.
-            if (angleDiff < 0.0f && rotateSpeed < 0.0f)
-            {
-                rotateSpeed = Mathf.Max(rotateSpeed, angleDiff / Time.deltaTime);
-            }
-            else if (angleDiff > 0.0f && rotateSpeed > 0.0f)
-            {
-                rotateSpeed = Mathf.Min(rotateSpeed, angleDiff / Time.deltaTime);
-            }
+     
 
             // Cancel special.
             this.cancelSpecial = cancelSpecial;
