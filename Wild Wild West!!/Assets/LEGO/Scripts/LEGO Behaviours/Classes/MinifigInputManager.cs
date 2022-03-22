@@ -15,11 +15,11 @@ namespace Unity.LEGO.Behaviours
             m_MinifigController = GetComponent<MinifigController>();
             m_GameFlowManager = FindObjectOfType<GameFlowManager>();
 
-            EventManager.AddListener<GameOverEvent>(OnGameOver);
+          //  EventManager.AddListener<GameOverEvent>(OnGameOver);
             EventManager.AddListener<OptionsMenuEvent>(OnOptionsMenu);
         }
 
-        protected virtual void OnGameOver(GameOverEvent evt)
+/*        protected virtual void OnGameOver(GameOverEvent evt)
         {
             // Disable input when the game is over.
             m_MinifigController.SetInputEnabled(false);
@@ -49,7 +49,7 @@ namespace Unity.LEGO.Behaviours
                         }
                 }
             }
-        }
+        }*/
 
         void OnOptionsMenu(OptionsMenuEvent evt)
         {
@@ -67,7 +67,7 @@ namespace Unity.LEGO.Behaviours
 
         void OnDestroy()
         {
-            EventManager.RemoveListener<GameOverEvent>(OnGameOver);
+          //  EventManager.RemoveListener<GameOverEvent>(OnGameOver);
             EventManager.RemoveListener<OptionsMenuEvent>(OnOptionsMenu);
         }
     }

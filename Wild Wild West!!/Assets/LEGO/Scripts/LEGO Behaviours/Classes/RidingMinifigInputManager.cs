@@ -6,7 +6,7 @@ namespace Unity.LEGO.Behaviours
 {
     public class RidingMinifigInputManager : MinifigInputManager
     {
-        protected override void OnGameOver(GameOverEvent evt) 
+/*        protected override void OnGameOver(GameOverEvent evt) 
         {
             var ridingMinifigController = m_MinifigController as RidingMinifigController;
 
@@ -28,6 +28,6 @@ namespace Unity.LEGO.Behaviours
                         }
                 }
             }
-        }
+        }*/
     }
 }

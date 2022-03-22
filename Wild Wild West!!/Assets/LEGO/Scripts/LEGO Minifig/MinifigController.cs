@@ -204,6 +204,7 @@ namespace Unity.LEGO.Minifig
         protected static readonly int playSpecialHash = Animator.StringToHash("Play Special");
         protected static readonly int cancelSpecialHash = Animator.StringToHash("Cancel Special");
         protected static readonly int specialIdHash = Animator.StringToHash("Special Id");
+        
 
         protected Action<bool> onSpecialComplete;
 
@@ -244,6 +245,7 @@ namespace Unity.LEGO.Minifig
 
         protected virtual void Update()
         {
+    
             if (exploded)
             {
                 return;
@@ -354,6 +356,11 @@ namespace Unity.LEGO.Minifig
                 if (!airborne)
                 {
                     jumpsInAir = maxJumpsInAir;
+                }
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                   
                 }
 
                 // Check if player is jumping.
@@ -724,27 +731,35 @@ namespace Unity.LEGO.Minifig
             inputEnabled = enabled;
         }
 
-        public void PlaySpecialAnimation(SpecialAnimation animation, AudioClip specialAudioClip = null, Action<bool> onSpecialComplete = null)
+        public void PlayInpuy(Input animation)
         {
             animator.SetBool(playSpecialHash, true);
-            animator.SetInteger(specialIdHash, (int)animation);
+          //  animator.SetInteger(specialIdHash, (int)animation);
 
-            if (specialAudioClip)
-            {
-                audioSource.PlayOneShot(specialAudioClip);
-            }
 
             this.onSpecialComplete = onSpecialComplete;
         }
 
-        public void StopSpecialAnimation()
+        public void StopInput()
         {
             stopSpecial = true;
         }
 
         /// <summary>
         /// Do not call this directly.
-        /// Called from SpecialAnimationBehaviour to signal that a special animation finished.
+        /// Called from 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// 
+        /// Behaviour to signal that a special animation finished.
         /// </summary>
         public void SpecialAnimationFinished()
         {
