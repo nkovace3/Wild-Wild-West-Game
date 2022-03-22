@@ -10,11 +10,12 @@ public class CameraFollow : MonoBehaviour
     public Vector3 offset;
     public Vector2 mouseTurn;
     public float sensitivity = .5f;
-    public Image image;
+    public Image image1;
+    public Image image2;
 
     private void Start()
     {
-        Invoke("deletePoster", 5);
+        Invoke("deletePoster", 10);
     }
     void Update()
     {
@@ -34,6 +35,7 @@ public class CameraFollow : MonoBehaviour
 
     void deletePoster()
     {
-        Destroy(image);
+        Destroy(image1);
+        Destroy(image2);
     }
 }
