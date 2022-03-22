@@ -1746,6 +1746,10 @@ GameObject:
   - component: {fileID: 6392756045387002665}
   - component: {fileID: 1216468830259517213}
   - component: {fileID: 7520434748517771326}
+  - component: {fileID: 5821581050225027849}
+  - component: {fileID: 8788014764854132370}
+  - component: {fileID: 5820066945242969492}
+  - component: {fileID: 4470235872541980373}
   m_Layer: 9
   m_Name: Char1
   m_TagString: Player
@@ -2075,6 +2079,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onlyActiveGameObject: 0
   hideChildren: 1
+--- !u!54 &5821581050225027849
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3393384512344719006}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!65 &8788014764854132370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3393384512344719006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6, y: 3.84, z: 0.8}
+  m_Center: {x: 0, y: 1.92, z: 0}
+--- !u!114 &5820066945242969492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3393384512344719006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcbf532e3c4212a4d813b87d250e10b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4470235872541980373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3393384512344719006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8033237a8e54f42b2b141b10ca06a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3393384512344719006}
+  enemy: {fileID: 0}
+  targetDistance: 3
+  health: 3
 --- !u!1 &3393384512366368683
 GameObject:
   m_ObjectHideFlags: 0
