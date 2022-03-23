@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class EnemyController : MonoBehaviour
     float attack = 0;
     bool playerAlive;
     bool kicked;
+    public Image image1;
+    public Image image2;
+    public Image image3;
 
     Animator animl;
     private void Awake()
@@ -50,6 +54,22 @@ public class EnemyController : MonoBehaviour
             {
                 Kick();
             } 
+        }
+
+
+        //Healthbar
+
+        if (playerHealth <= 7)
+        {
+            Destroy(image1);
+        }
+        if (playerHealth <= 4)
+        {
+            Destroy(image2);
+        }
+        if (playerHealth <= 0)
+        {
+            Destroy(image3);
         }
     }
 
