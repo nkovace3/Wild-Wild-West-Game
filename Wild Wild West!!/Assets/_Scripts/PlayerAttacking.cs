@@ -9,11 +9,15 @@ public class PlayerAttacking : MonoBehaviour
     public GameObject enemy2;
     public GameObject enemy3;
     public GameObject enemy4;
+    public GameObject boss;
     public float targetDistance;
     public int health = 3;
     public int health2 = 3;
     public int health3 = 3;
     public int health4 = 3;
+    public int bossHealth = 10;
+
+
 
 
 
@@ -25,6 +29,8 @@ public class PlayerAttacking : MonoBehaviour
         float distance2 = Mathf.Abs(enemy2.transform.position.magnitude - player.transform.position.magnitude);
         float distance3 = Mathf.Abs(enemy3.transform.position.magnitude - player.transform.position.magnitude);
         float distance4 = Mathf.Abs(enemy4.transform.position.magnitude - player.transform.position.magnitude);
+        float bossDistance = Mathf.Abs(boss.transform.position.magnitude - player.transform.position.magnitude);
+
 
 
         if ((distance <= 2f) && Input.GetMouseButtonDown(0))
@@ -71,6 +77,8 @@ public class PlayerAttacking : MonoBehaviour
             enemy3.SetActive(false);
         }
 
+        //
+
         if ((distance4 <= 2f) && Input.GetMouseButtonDown(0))
         {
 
@@ -83,6 +91,20 @@ public class PlayerAttacking : MonoBehaviour
         if (health4 <= 0)
         {
             enemy4.SetActive(false);
+        }
+        //
+        if ((bossDistance<= 2f) && Input.GetMouseButtonDown(0))
+        {
+
+            bossHealth--;
+        }
+        if ((bossDistance <= 2f) && Input.GetMouseButtonDown(1))
+        {
+            bossHealth = bossHealth - 2;
+        }
+        if (bossHealth <= 0)
+        {
+            boss.SetActive(false);
         }
 
 
