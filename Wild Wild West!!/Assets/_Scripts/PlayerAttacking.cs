@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerAttacking : MonoBehaviour
 {
     public GameObject player;
@@ -16,7 +16,8 @@ public class PlayerAttacking : MonoBehaviour
     public int health3 = 3;
     public int health4 = 3;
     public int bossHealth = 10;
-
+    public Text XP;
+    public int[] exp = new int[5];
 
 
 
@@ -24,7 +25,7 @@ public class PlayerAttacking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         float distance = Mathf.Abs(enemy.transform.position.magnitude - player.transform.position.magnitude);
         float distance2 = Mathf.Abs(enemy2.transform.position.magnitude - player.transform.position.magnitude);
         float distance3 = Mathf.Abs(enemy3.transform.position.magnitude - player.transform.position.magnitude);
@@ -35,16 +36,17 @@ public class PlayerAttacking : MonoBehaviour
 
         if ((distance <= 2f) && Input.GetMouseButtonDown(0))
         {
-           
+
             health--;
         }
         if ((distance <= 2f) && Input.GetMouseButtonDown(1))
         {
-            health = health-2;
+            health = health - 2;
         }
         if (health <= 0)
         {
             enemy.SetActive(false);
+            exp[0] = 100;
         }
         //
 
@@ -60,6 +62,7 @@ public class PlayerAttacking : MonoBehaviour
         if (health2 <= 0)
         {
             enemy2.SetActive(false);
+            exp[1] = 100;
         }
 
 
@@ -75,6 +78,7 @@ public class PlayerAttacking : MonoBehaviour
         if (health3 <= 0)
         {
             enemy3.SetActive(false);
+            exp[2] = 100;
         }
 
         //
@@ -91,11 +95,12 @@ public class PlayerAttacking : MonoBehaviour
         if (health4 <= 0)
         {
             enemy4.SetActive(false);
+            exp[3] = 100;
+
         }
         //
-        if ((bossDistance<= 2f) && Input.GetMouseButtonDown(0))
+        if ((bossDistance <= 2f) && Input.GetMouseButtonDown(0))
         {
-
             bossHealth--;
         }
         if ((bossDistance <= 2f) && Input.GetMouseButtonDown(1))
@@ -105,8 +110,11 @@ public class PlayerAttacking : MonoBehaviour
         if (bossHealth <= 0)
         {
             boss.SetActive(false);
+            exp[4] = 500;
+
+
         }
 
-
+        XP.text = "Experience:" + (exp[0]+ exp[1]+ exp[2]+ exp[3]+ exp[4]);
     }
 }

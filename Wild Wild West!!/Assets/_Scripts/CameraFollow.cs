@@ -12,9 +12,9 @@ public class CameraFollow : MonoBehaviour
     public float sensitivity = .5f;
     public Image image1;
     public Image image2;
+ 
 
-    //for the xp bar
-    public int addBar;
+    
     public Image[] filler = new Image[4];
 
 
@@ -33,12 +33,8 @@ public class CameraFollow : MonoBehaviour
 
         transform.LookAt(player);
 
-       
-        addBar++;
-        if (addBar % 100 ==0)
-        {
-            Destroy(filler[addBar / 100]);
-        }
+     
+
     }
 
     
@@ -48,4 +44,5 @@ public class CameraFollow : MonoBehaviour
         Destroy(image1);
         Destroy(image2);
     }
+   
 }

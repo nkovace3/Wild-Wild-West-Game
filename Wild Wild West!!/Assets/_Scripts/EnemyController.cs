@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class EnemyController : MonoBehaviour
         {
             player.SetActive(false);
             playerAlive = false;
+            Invoke("Restart", 1);
 
         }
 
@@ -72,7 +74,7 @@ public class EnemyController : MonoBehaviour
             Destroy(image3);
         }
     }
-
+    //kick
     void Kick()
     {
         float distance = Mathf.Abs(enemy.transform.position.magnitude - player.transform.position.magnitude);
@@ -88,6 +90,11 @@ public class EnemyController : MonoBehaviour
     void KickTimer()
     {
         kicked = false;
+    }
+
+    void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
 }
