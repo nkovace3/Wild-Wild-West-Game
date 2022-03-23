@@ -33,7 +33,7 @@ public class CameraFollow : MonoBehaviour
 
         transform.LookAt(player);
 
-        Rotate();
+       
         addBar++;
         if (addBar % 100 ==0)
         {
@@ -41,10 +41,7 @@ public class CameraFollow : MonoBehaviour
         }
     }
 
-    void Rotate()
-    {
-        offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * sensitivity, Vector3.up) * offset;
-    }
+    
 
     void deletePoster()
     {
