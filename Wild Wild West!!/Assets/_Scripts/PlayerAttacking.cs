@@ -20,8 +20,6 @@ public class PlayerAttacking : MonoBehaviour
     public int[] exp = new int[5];
 
 
-
-
     // Update is called once per frame
     void Update()
     {
@@ -116,5 +114,6 @@ public class PlayerAttacking : MonoBehaviour
         }
 
         XP.text = "Experience:" + (exp[0]+ exp[1]+ exp[2]+ exp[3]+ exp[4]);
+
     }
 }
