@@ -42,7 +42,7 @@ public class Selector : MonoBehaviour
                 PlayerThreeRender.enabled = true;
                 charInt++;
                 break;
-            case 
+            case 3:
                 PlayerThreeRender.enabled = false;
                 PlayerThree.transform.position = offScreen;
                 PlayerOne.transform.position = CharacterPos;
@@ -60,20 +60,6 @@ public class Selector : MonoBehaviour
 
         }
     }
-    public void playGame()
-    {
-        if(charInt == 1){
-        
-
-    }
-        if(charInt == 2){
-
-
-    }
-        if(charInt == 3){
-
-
-    }
-
+    
 }
 
