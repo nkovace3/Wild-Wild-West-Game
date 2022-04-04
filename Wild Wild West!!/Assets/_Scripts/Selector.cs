@@ -28,21 +28,21 @@ public class Selector : MonoBehaviour
     {
         switch (charInt)
         {
-            case 1:
+            case 1: 
                 PlayerOneRender.enabled = false;
                 PlayerOne.transform.position = offScreen;
                 PlayerTwo.transform.position = CharacterPos;
                 PlayerTwoRender.enabled = true;
                 charInt++;
                 break;
-            case 2:
+            case 2: 
                 PlayerTwoRender.enabled = false;
                 PlayerTwo.transform.position = offScreen;
                 PlayerThree.transform.position = CharacterPos;
                 PlayerThreeRender.enabled = true;
                 charInt++;
                 break;
-            case 3:
+            case 
                 PlayerThreeRender.enabled = false;
                 PlayerThree.transform.position = offScreen;
                 PlayerOne.transform.position = CharacterPos;
@@ -62,6 +62,16 @@ public class Selector : MonoBehaviour
     }
     public void playGame()
     {
+        if(charInt == 1){
+        
+
+    }
+        if(charInt == 2){
+
+
+    }
+        if(charInt == 3){
+
 
     }
 
