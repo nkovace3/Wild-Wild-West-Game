@@ -5079,9 +5079,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 9065305274124290218}
-  enemy: {fileID: 9078427627668221896, guid: 934668409d4904809a1489b29640e933, type: 3}
+  enemy: {fileID: 0}
+  enemy2: {fileID: 0}
+  enemy3: {fileID: 0}
+  enemy4: {fileID: 0}
+  boss: {fileID: 0}
   targetDistance: 3
   health: 3
+  health2: 3
+  health3: 3
+  health4: 3
+  bossHealth: 10
+  XP: {fileID: 0}
+  exp: 0000000000000000000000000000000000000000
 --- !u!1 &9065305274143374355
 GameObject:
   m_ObjectHideFlags: 0
