@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 100}
+  m_AnchoredPosition: {x: 8, y: 0}
+  m_SizeDelta: {x: 550, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8407936
 MonoBehaviour:
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Text: On the main goon, you find a train ticket addressed to Billy the Kid with
     a final destination of Soft Canyon, your hometown! You rush to the train to catch
     him, only to run into more of his goons as well as his second in command, Sergio!
-    You must fight them to reach Billy the kid!
+    You must fight them to reach Billy the kid! But be careful - They have guns.
 --- !u!222 &8407937
 CanvasRenderer:
   m_ObjectHideFlags: 0
