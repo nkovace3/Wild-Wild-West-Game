@@ -5,11 +5,7 @@ using UnityEngine.UI;
 public class PlayerAttacking : MonoBehaviour
 {
     public GameObject player;
-    public GameObject enemy;
-    public GameObject enemy2;
-    public GameObject enemy3;
-    public GameObject enemy4;
-    public GameObject boss;
+    public GameObject [] enemy;
     public float targetDistance;
     public int health = 3;
     public int health2 = 3;
@@ -23,13 +19,11 @@ public class PlayerAttacking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        float distance = Mathf.Abs(enemy.transform.position.magnitude - player.transform.position.magnitude);
-        float distance2 = Mathf.Abs(enemy2.transform.position.magnitude - player.transform.position.magnitude);
-        float distance3 = Mathf.Abs(enemy3.transform.position.magnitude - player.transform.position.magnitude);
-        float distance4 = Mathf.Abs(enemy4.transform.position.magnitude - player.transform.position.magnitude);
-        float bossDistance = Mathf.Abs(boss.transform.position.magnitude - player.transform.position.magnitude);
-
+        float bossDistance = Mathf.Abs(enemy[0].transform.position.magnitude - player.transform.position.magnitude);
+        float distance = Mathf.Abs(enemy[1].transform.position.magnitude - player.transform.position.magnitude);
+        float distance2 = Mathf.Abs(enemy[2].transform.position.magnitude - player.transform.position.magnitude);
+        float distance3 = Mathf.Abs(enemy[3].transform.position.magnitude - player.transform.position.magnitude);
+        float distance4 = Mathf.Abs(enemy[4].transform.position.magnitude - player.transform.position.magnitude);
 
 
         if ((distance <= 2f) && Input.GetMouseButtonDown(0))
@@ -43,7 +37,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         if (health <= 0)
         {
-            enemy.SetActive(false);
+            enemy[1].SetActive(false);
             exp[0] = 100;
         }
         //
@@ -59,7 +53,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         if (health2 <= 0)
         {
-            enemy2.SetActive(false);
+            enemy[2].SetActive(false);
             exp[1] = 100;
         }
 
@@ -75,7 +69,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         if (health3 <= 0)
         {
-            enemy3.SetActive(false);
+            enemy[3].SetActive(false);
             exp[2] = 100;
         }
 
@@ -92,7 +86,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         if (health4 <= 0)
         {
-            enemy4.SetActive(false);
+            enemy[4].SetActive(false);
             exp[3] = 100;
 
         }
@@ -107,7 +101,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         if (bossHealth <= 0)
         {
-            boss.SetActive(false);
+            enemy[0].SetActive(false);
             exp[4] = 500;
 
 
