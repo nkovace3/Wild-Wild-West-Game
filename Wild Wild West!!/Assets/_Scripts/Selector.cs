@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Selector : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class Selector : MonoBehaviour
     public GameObject PlayerThree;
     private Vector3 CharacterPos;
     private Vector3 offScreen;
-    private int charInt = 1;
-    private SpriteRenderer PlayerOneRender; 
+    private static int charInt = 0;
+    private SpriteRenderer PlayerOneRender;
     private SpriteRenderer PlayerTwoRender;
     private SpriteRenderer PlayerThreeRender;
 
@@ -28,26 +29,26 @@ public class Selector : MonoBehaviour
     {
         switch (charInt)
         {
-            case 1: 
+            case 0:
                 PlayerOneRender.enabled = false;
                 PlayerOne.transform.position = offScreen;
                 PlayerTwo.transform.position = CharacterPos;
                 PlayerTwoRender.enabled = true;
                 charInt++;
                 break;
-            case 2: 
+            case 1:
                 PlayerTwoRender.enabled = false;
                 PlayerTwo.transform.position = offScreen;
                 PlayerThree.transform.position = CharacterPos;
                 PlayerThreeRender.enabled = true;
                 charInt++;
                 break;
-            case 3:
+            case 2:
                 PlayerThreeRender.enabled = false;
                 PlayerThree.transform.position = offScreen;
                 PlayerOne.transform.position = CharacterPos;
                 PlayerOneRender.enabled = true;
-                charInt = 1;
+                charInt = 0;
                 break;
             default:
                 PlayerOneRender.enabled = true;
@@ -60,6 +61,12 @@ public class Selector : MonoBehaviour
 
         }
     }
-    
-}
 
+    public void StartGame()
+    {
+        PlayerPrefs.SetInt("selectedChar", charInt);
+        SceneManager.LoadScene("Saloon", LoadSceneMode.Single);
+
+    }
+
+}
