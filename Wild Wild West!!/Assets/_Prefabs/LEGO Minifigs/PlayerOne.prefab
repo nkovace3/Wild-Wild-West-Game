@@ -4695,7 +4695,7 @@ GameObject:
   - component: {fileID: 9065305274124290216}
   - component: {fileID: 9065305274124290217}
   - component: {fileID: 9065305274124290219}
-  - component: {fileID: 9065305274124290215}
+  - component: {fileID: 2351907653559241574}
   m_Layer: 9
   m_Name: PlayerOne
   m_TagString: Player
@@ -5066,7 +5066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcbf532e3c4212a4d813b87d250e10b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9065305274124290215
+--- !u!114 &2351907653559241574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5075,23 +5075,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9065305274124290218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c8033237a8e54f42b2b141b10ca06a2, type: 3}
+  m_Script: {fileID: 11500000, guid: c4e85aedeeca3174db9c0dfdfdc0ea37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 9065305274124290218}
-  enemy: {fileID: 0}
-  enemy2: {fileID: 0}
-  enemy3: {fileID: 0}
-  enemy4: {fileID: 0}
-  boss: {fileID: 0}
-  targetDistance: 3
-  health: 3
-  health2: 3
-  health3: 3
-  health4: 3
-  bossHealth: 10
-  XP: {fileID: 0}
-  exp: 0000000000000000000000000000000000000000
+  image1: {fileID: 3603412763242832908, guid: 205a79d08786147298ef4d3c7606df0d, type: 3}
+  image2: {fileID: 3603412763242832908, guid: 205a79d08786147298ef4d3c7606df0d, type: 3}
+  image3: {fileID: 3603412763242832908, guid: 205a79d08786147298ef4d3c7606df0d, type: 3}
 --- !u!1 &9065305274143374355
 GameObject:
   m_ObjectHideFlags: 0

@@ -4866,6 +4866,7 @@ GameObject:
   - component: {fileID: 2935851360940647119}
   - component: {fileID: 6982936184607934203}
   - component: {fileID: 1753148259847961048}
+  - component: {fileID: 3671371078534358313}
   m_Layer: 9
   m_Name: Abraham the Alcoholic
   m_TagString: Player
@@ -5010,6 +5011,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onlyActiveGameObject: 0
   hideChildren: 1
+--- !u!114 &3671371078534358313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6853957184698281848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e85aedeeca3174db9c0dfdfdc0ea37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 6853957184698281848}
+  image1: {fileID: 0}
+  image2: {fileID: 0}
+  image3: {fileID: 0}
 --- !u!1 &6853957184704333995
 GameObject:
   m_ObjectHideFlags: 0

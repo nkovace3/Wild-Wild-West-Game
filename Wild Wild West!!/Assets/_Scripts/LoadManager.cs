@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class LoadManager : MonoBehaviour
+public class LoadManager : PlayerAttacking
 {
     public GameObject[] characterPrefabs;
     public Transform spawn;
@@ -10,6 +12,9 @@ public class LoadManager : MonoBehaviour
     public CameraFollow cameraFollow;
     public EnemyBossController bossController;
     public NextLevelCollision nextLevel;
+    public PlayerHealth playerHealth;
+    //public PlayerAttacking playerAttacking;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +30,7 @@ public class LoadManager : MonoBehaviour
         cameraFollow.player = clone.transform;
         bossController.player = clone;
         nextLevel.player = clone;
+        player = clone;
+        //player=clone;
     }
-
-
 }

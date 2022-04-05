@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBossController : MonoBehaviour
+public class EnemyBossController : PlayerHealth
 {
-    public GameObject player;
     public GameObject enemy;
     public float targetDistance;
     public RaycastHit shot;
     public float followSpeed = 0;
-    public int playerHealth = 10;
-    float attack = 0;
     bool playerAlive;
     bool kicked;
 
     Animator animl;
-    private void Awake()
+    void Awake()
     {
         playerAlive = true;
         kicked = false;
@@ -25,12 +22,6 @@ public class EnemyBossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerHealth == 0)
-        {
-            player.SetActive(false);
-            playerAlive = false;
-
-        }
 
         transform.LookAt(player.transform);        //move towards the player
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot))
@@ -40,7 +31,6 @@ public class EnemyBossController : MonoBehaviour
         if (targetDistance >= 1.5)
         {
             followSpeed = 0.2f;
-            //enemy.GetComponent<Animation>().Play("Locomotion");
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, followSpeed);
         }
         else
@@ -48,25 +38,27 @@ public class EnemyBossController : MonoBehaviour
             followSpeed = 0;
             if (playerAlive && !kicked)
             {
-                Kick();
+                Head();
             }
         }
     }
 
-    void Kick()
+    void Head()
     {
-        float distance = Mathf.Abs(enemy.transform.position.magnitude - player.transform.position.magnitude);
+        float distance = Mathf.Abs(player.transform.position.magnitude - enemy.transform.position.magnitude);
         animl.SetTrigger("Head");
         if (distance <= 1.5f)
         {
-            playerHealth--;
+            Debug.Log(enemy.name);
+            DecrementByThree();
         }
         kicked = true;
-        Invoke("KickTimer", 1.5f);
+        Invoke("HeadTimer", 1.5f);
     }
 
-    void KickTimer()
+    void HeadTimer()
     {
         kicked = false;
     }
 }
+

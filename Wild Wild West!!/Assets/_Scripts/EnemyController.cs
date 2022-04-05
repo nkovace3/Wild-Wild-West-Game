@@ -4,20 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : PlayerHealth
 {
-    public GameObject player;
+
     public GameObject enemy;
     public float targetDistance;
     public RaycastHit shot;
     public float followSpeed = 0;
-    public int playerHealth=10;
-    float attack = 0;
     bool playerAlive;
     bool kicked;
-    public Image image1;
-    public Image image2;
-    public Image image3;
 
     Animator animl;
     private void Awake()
@@ -30,14 +25,6 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerHealth == 0)
-        {
-            player.SetActive(false);
-            playerAlive = false;
-            Invoke("Restart", 1);
-
-        }
-
         transform.LookAt(player.transform);        //move towards the player
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out shot))
         {
@@ -46,42 +33,26 @@ public class EnemyController : MonoBehaviour
         if (targetDistance >= 2)
         {
             followSpeed = 0.2f;
-            //enemy.GetComponent<Animation>().Play("Locomotion");
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, followSpeed);
         }
         else
         {
             followSpeed = 0;
-            if (playerAlive&&!kicked)
+            if (playerAlive && !kicked)
             {
                 Kick();
-            } 
-        }
-
-
-        //Healthbar
-
-        if (playerHealth <= 7)
-        {
-            Destroy(image1);
-        }
-        if (playerHealth <= 4)
-        {
-            Destroy(image2);
-        }
-        if (playerHealth <= 0)
-        {
-            Destroy(image3);
+            }
         }
     }
     //kick
     void Kick()
     {
-        float distance = Mathf.Abs(enemy.transform.position.magnitude - player.transform.position.magnitude);
+        float distance = Mathf.Abs(player.transform.position.magnitude - enemy.transform.position.magnitude);
         animl.SetTrigger("Kick");
-        if(distance <= 1.5f)
+        if (distance <= 2f)
         {
-            playerHealth--;
+            Debug.Log(enemy.name);
+            DecrementByOne();
         }
         kicked = true;
         Invoke("KickTimer", 1f);
@@ -91,10 +62,4 @@ public class EnemyController : MonoBehaviour
     {
         kicked = false;
     }
-
-    void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    
 }
