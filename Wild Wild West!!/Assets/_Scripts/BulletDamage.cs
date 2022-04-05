@@ -8,6 +8,7 @@ public class BulletDamage : MonoBehaviour
 {
     public GameObject player;
     public int health = 100;
+    public bool isPlayer = false;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -29,8 +30,12 @@ public class BulletDamage : MonoBehaviour
         {
             
             player.SetActive(false);
-            
-           
+            if(isPlayer == true)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+            }
+
         }
     }
 }
