@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Train.unity
     guid: 64ea098efb97147e5946145412838f58
+  - enabled: 1
+    path: Assets/_Scenes/AfterTrain.unity
+    guid: d1fa79ae8632d40c9afa1ff63ffd7965
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
