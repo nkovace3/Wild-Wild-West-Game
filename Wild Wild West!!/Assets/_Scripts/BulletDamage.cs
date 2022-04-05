@@ -17,6 +17,10 @@ public class BulletDamage : MonoBehaviour
             Debug.Log("hit");
             health -= 100;
         }
+        if (other.tag.Equals("Beer"))
+        {
+            health -= 10;
+        }
     }
     private void Update()
     {
