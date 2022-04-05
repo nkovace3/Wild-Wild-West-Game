@@ -9,7 +9,7 @@ public class LoadManager : MonoBehaviour
     public EnemyController[] enemyController;
     public CameraFollow cameraFollow;
     public EnemyBossController bossController;
-
+    public NextLevelCollision nextLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,7 @@ public class LoadManager : MonoBehaviour
         enemyController[3].player = clone;
         cameraFollow.player = clone.transform;
         bossController.player = clone;
+        nextLevel.player = clone;
     }
 
 
