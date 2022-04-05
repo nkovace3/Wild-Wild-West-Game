@@ -193,11 +193,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: On the main goon, you find a train ticket for the Wailing-Valley Express
-    addressed to Billy the Kid with a final destination of Soft Canyon, your hometown!
-    You rush to the train to catch him, only to run into more of his goons as well
-    as his second in command, Sergio! You must fight them to reach Billy the kid!
-    But be careful - They have guns.
+  m_Text: On the main goon (Billy's Wife's Twin brother), you find a train ticket
+    for the Wailing-Valley Express addressed to Billy the Kid with a final destination
+    of Soft Canyon, your hometown! You rush to the train to catch him, only to run
+    into more of his goons as well as his second in command, his wife Sergio! You
+    defeat more goons and interrogate her to find Billy! But be careful - They have
+    guns.
 --- !u!222 &8407937
 CanvasRenderer:
   m_ObjectHideFlags: 0
