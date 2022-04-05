@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoadManager : MonoBehaviour
+public class LoadManager : PlayerAttacking
 {
     public GameObject[] characterPrefabs;
     public Transform spawn;
@@ -25,6 +25,7 @@ public class LoadManager : MonoBehaviour
         cameraFollow.player = clone.transform;
         bossController.player = clone;
         nextLevel.player = clone;
+        player = clone;
     }
 
 
