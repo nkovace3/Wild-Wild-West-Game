@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/_Scenes/GameDescription.unity
     guid: 9f6197ccd70a34d89a361dfc2cfa608b
   - enabled: 1
+    path: Assets/_Scenes/BeforeSaloon.unity
+    guid: 2fbd52960dab94167b47c459ac3ecc42
+  - enabled: 1
     path: Assets/_Scenes/CharacterSelection.unity
     guid: 2347de15bbf074820b5391abfa67295d
   - enabled: 1

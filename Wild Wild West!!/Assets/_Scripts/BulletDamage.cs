@@ -19,7 +19,8 @@ public class BulletDamage : MonoBehaviour
         }
         if (other.tag.Equals("Beer"))
         {
-            health -= 10;
+            health -= 20;
+            Destroy(other.gameObject);
         }
     }
     private void Update()
