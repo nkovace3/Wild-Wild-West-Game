@@ -4746,8 +4746,11 @@ MonoBehaviour:
   player: {fileID: 0}
   enemy: {fileID: 7743998902329123527}
   targetDistance: 3
-  followSpeed: 5
+  followSpeed: 4
   playerHealth: 10
+  image1: {fileID: 0}
+  image2: {fileID: 0}
+  image3: {fileID: 0}
 --- !u!65 &7743998902329123536
 BoxCollider:
   m_ObjectHideFlags: 0
