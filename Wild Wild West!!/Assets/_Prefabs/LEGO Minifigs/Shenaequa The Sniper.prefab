@@ -6137,7 +6137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 652629fecff6a4c8fa0a985e628de942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForwardSpeed: 8
+  maxForwardSpeed: 12
   maxBackwardSpeed: 6
   acceleration: 40
   maxRotateSpeed: 450
