@@ -24,7 +24,6 @@ public class BulletDamage : MonoBehaviour
         {
             
             player.SetActive(false);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             
            
         }
