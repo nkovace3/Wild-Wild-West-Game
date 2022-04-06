@@ -7,13 +7,14 @@ public class PlayerAttacking : MonoBehaviour
     public GameObject player;
     public GameObject [] enemy;
     public float targetDistance;
-    public int health = 3;
-    public int health2 = 3;
-    public int health3 = 3;
-    public int health4 = 3;
+    public int health = 5;
+    public int health2 = 5;
+    public int health3 = 5;
+    public int health4 = 5;
     public int bossHealth = 10;
     public Text XP;
     public int[] exp = new int[5];
+    public int punchStrength = 1;
 
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class PlayerAttacking : MonoBehaviour
         if ((distance <= 2f) && Input.GetMouseButtonDown(0))
         {
 
-            health--;
+            health-=punchStrength;
         }
         if ((distance <= 2f) && Input.GetMouseButtonDown(1))
         {
@@ -39,13 +40,15 @@ public class PlayerAttacking : MonoBehaviour
         {
             enemy[1].SetActive(false);
             exp[0] = 100;
+            punchStrength++;
+            
         }
         //
 
         if ((distance2 <= 2f) && Input.GetMouseButtonDown(0))
         {
 
-            health2--;
+            health2-=punchStrength;
         }
         if ((distance2 <= 2f) && Input.GetMouseButtonDown(1))
         {
@@ -55,13 +58,14 @@ public class PlayerAttacking : MonoBehaviour
         {
             enemy[2].SetActive(false);
             exp[1] = 100;
+            punchStrength++;
         }
 
 
         if ((distance3 <= 2f) && Input.GetMouseButtonDown(0))
         {
 
-            health3--;
+            health3-=punchStrength;
         }
         if ((distance3 <= 2f) && Input.GetMouseButtonDown(1))
         {
@@ -71,6 +75,7 @@ public class PlayerAttacking : MonoBehaviour
         {
             enemy[3].SetActive(false);
             exp[2] = 100;
+            punchStrength++;
         }
 
         //
@@ -78,7 +83,7 @@ public class PlayerAttacking : MonoBehaviour
         if ((distance4 <= 2f) && Input.GetMouseButtonDown(0))
         {
 
-            health4--;
+            health4-=punchStrength;
         }
         if ((distance4 <= 2f) && Input.GetMouseButtonDown(1))
         {
@@ -88,12 +93,13 @@ public class PlayerAttacking : MonoBehaviour
         {
             enemy[4].SetActive(false);
             exp[3] = 100;
+            punchStrength++;
 
         }
         //
         if ((bossDistance <= 2f) && Input.GetMouseButtonDown(0))
         {
-            bossHealth--;
+            bossHealth-=punchStrength;
         }
         if ((bossDistance <= 2f) && Input.GetMouseButtonDown(1))
         {
