@@ -4742,6 +4742,7 @@ GameObject:
   - component: {fileID: 3377546871555181989}
   - component: {fileID: 1722793991657091085}
   - component: {fileID: 1457318664972174773}
+  - component: {fileID: 5561280800228097496}
   m_Layer: 9
   m_Name: One Button Pizza Boy 2
   m_TagString: Player
@@ -4935,6 +4936,19 @@ MonoBehaviour:
   player: {fileID: 7135224353739174189}
   health: 100
   isPlayer: 0
+--- !u!114 &5561280800228097496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7135224353739174189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657c7a1b07a334eef94a471e9fe3f2fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.4
 --- !u!1 &7135224353760090545
 GameObject:
   m_ObjectHideFlags: 0
