@@ -10,7 +10,7 @@ public class Gun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Shooting", 1, 2);
+        InvokeRepeating("Shooting", 1, 0.5f);
     }
 
     // Update is called once per frame
