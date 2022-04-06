@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Text: "After defeating Sergio, you find out that Billy the Kid is making his
     way to Soft Canyon, your hometown! You must capture him before he reaches there
     and wreaks havoc!\n\n\n\n\n\n\n                                              
-    Click anwhere to Continue\n"
+    Click anywhere to Continue\n"
 --- !u!222 &759378635
 CanvasRenderer:
   m_ObjectHideFlags: 0
