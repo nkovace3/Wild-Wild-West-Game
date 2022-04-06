@@ -15,7 +15,7 @@ public class PlayerAttacking : MonoBehaviour
     public Text XP;
     public int[] exp = new int[5];
     public int punchStrength = 1;
-
+    public int experience = 0;
 
     // Update is called once per frame
     void Update()
@@ -26,6 +26,10 @@ public class PlayerAttacking : MonoBehaviour
         float distance3 = Mathf.Abs(enemy[3].transform.position.magnitude - player.transform.position.magnitude);
         float distance4 = Mathf.Abs(enemy[4].transform.position.magnitude - player.transform.position.magnitude);
 
+        if (experience == 200)
+        {
+            punchStrength++;
+        }
 
         if ((distance <= 2f) && Input.GetMouseButtonDown(0))
         {
@@ -40,7 +44,7 @@ public class PlayerAttacking : MonoBehaviour
         {
             enemy[1].SetActive(false);
             exp[0] = 100;
-            punchStrength++;
+            experience += 100;
             
         }
         //
@@ -58,7 +62,7 @@ public class PlayerAttacking : MonoBehaviour
         {
             enemy[2].SetActive(false);
             exp[1] = 100;
-            punchStrength++;
+            experience += 100;
         }
 
 
@@ -75,7 +79,7 @@ public class PlayerAttacking : MonoBehaviour
         {
             enemy[3].SetActive(false);
             exp[2] = 100;
-            punchStrength++;
+            experience += 100;
         }
 
         //
@@ -93,7 +97,7 @@ public class PlayerAttacking : MonoBehaviour
         {
             enemy[4].SetActive(false);
             exp[3] = 100;
-            punchStrength++;
+            experience += 100;
 
         }
         //
