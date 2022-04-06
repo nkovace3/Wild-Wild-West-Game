@@ -34,11 +34,7 @@ public class PlayerAttackingTrain : MonoBehaviour
             Destroy(enemy);
             exp[0] = 100;
         }
-        //
-
        
-        //
-      
 
         XP.text = "Experience:" + (exp[0] + exp[1] + exp[2]);
 
