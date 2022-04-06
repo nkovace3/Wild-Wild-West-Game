@@ -15,6 +15,7 @@ public class PlayerAttacking : MonoBehaviour
     public Text XP;
     public int[] exp = new int[5];
     public int punchStrength = 1;
+    public int kickStrength = 2;
     public int experience = 0;
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class PlayerAttacking : MonoBehaviour
         if (experience == 200)
         {
             punchStrength++;
+            kickStrength++;
         }
 
         if ((distance <= 2f) && Input.GetMouseButtonDown(0))
@@ -38,7 +40,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         if ((distance <= 2f) && Input.GetMouseButtonDown(1))
         {
-            health = health - 2;
+            health = health - kickStrength;
         }
         if (health <= 0)
         {
@@ -56,7 +58,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         if ((distance2 <= 2f) && Input.GetMouseButtonDown(1))
         {
-            health2 = health2 - 2;
+            health2 = health2 - kickStrength;
         }
         if (health2 <= 0)
         {
@@ -73,7 +75,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         if ((distance3 <= 2f) && Input.GetMouseButtonDown(1))
         {
-            health3 = health3 - 2;
+            health3 = health3 - kickStrength;
         }
         if (health3 <= 0)
         {
@@ -91,7 +93,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         if ((distance4 <= 2f) && Input.GetMouseButtonDown(1))
         {
-            health4 = health4 - 2;
+            health4 = health4 - kickStrength;
         }
         if (health4 <= 0)
         {
@@ -107,7 +109,7 @@ public class PlayerAttacking : MonoBehaviour
         }
         if ((bossDistance <= 2f) && Input.GetMouseButtonDown(1))
         {
-            bossHealth = bossHealth - 2;
+            bossHealth = bossHealth - kickStrength;
         }
         if (bossHealth <= 0)
         {
